@@ -32,6 +32,7 @@ const showAlert = num => {
 };
 
 const check_win = () => {
+  /*
   for (let i = 0; i < 3; i++) {
     //Check for x axis
     for (let j = 0; j < 3; j++) {
@@ -142,10 +143,96 @@ const check_win = () => {
         return;
       }
     }
+  }*/
+  for (let i = 0; i < 5; i++) {
+    //  console.log(tic_tac_toe[i].toString());
+    if (tic_tac_toe[i].toString() === "X,X,X,X,X") {
+      console.log("X wins");
+      wictory("1");
+    }
+  }
+
+  for (let i = 0; i < 5; i++) {
+    //  console.log(tic_tac_toe[i].toString());
+    if (tic_tac_toe[i].toString() === "O,O,O,O,O") {
+      console.log("O wins");
+      wictory("2");
+    }
+  }
+
+  for (let i = 0; i < 5; i++) {
+    if (
+      tic_tac_toe[0][i] === "X" &&
+      tic_tac_toe[1][i] === "X" &&
+      tic_tac_toe[2][i] === "X" &&
+      tic_tac_toe[3][i] === "X" &&
+      tic_tac_toe[4][i] === "X"
+    ) {
+      console.log("X wins");
+      wictory("1");
+    }
+  }
+
+  for (let i = 0; i < 5; i++) {
+    if (
+      tic_tac_toe[0][i] === "O" &&
+      tic_tac_toe[1][i] === "O" &&
+      tic_tac_toe[2][i] === "O" &&
+      tic_tac_toe[3][i] === "O" &&
+      tic_tac_toe[4][i] === "O"
+    ) {
+      console.log("O wins");
+      wictory("2");
+    }
+  }
+
+  if (
+    tic_tac_toe[0][0] === "X" &&
+    tic_tac_toe[1][1] === "X" &&
+    tic_tac_toe[2][2] === "X" &&
+    tic_tac_toe[3][3] === "X" &&
+    tic_tac_toe[4][4] === "X"
+  ) {
+    console.log("X wins");
+    wictory("1");
+  }
+
+  if (
+    tic_tac_toe[0][0] === "O" &&
+    tic_tac_toe[1][1] === "O" &&
+    tic_tac_toe[2][2] === "O" &&
+    tic_tac_toe[3][3] === "O" &&
+    tic_tac_toe[4][4] === "O"
+  ) {
+    console.log("O wins");
+    wictory("2");
+  }
+
+  if (
+    tic_tac_toe[4][0] === "X" &&
+    tic_tac_toe[3][1] === "X" &&
+    tic_tac_toe[2][2] === "X" &&
+    tic_tac_toe[1][3] === "X" &&
+    tic_tac_toe[0][4] === "X"
+  ) {
+    console.log("X wins");
+    wictory("1");
+  }
+
+  if (
+    tic_tac_toe[4][0] === "O" &&
+    tic_tac_toe[3][1] === "O" &&
+    tic_tac_toe[2][2] === "O" &&
+    tic_tac_toe[1][3] === "O" &&
+    tic_tac_toe[0][4] === "O"
+  ) {
+    console.log("O wins");
+    wictory("2");
   }
 };
 
-const wictory = () => {
+const wictory = winner => {
+  alert(`Player ${winner} wins!`);
   let win = document.createTextNode("Wictory!");
   wictory_text.appendChild(win);
 };
