@@ -232,7 +232,7 @@ const check_win = () => {
 };
 
 const wictory = winner => {
-  alert(`Player ${winner} wins!`);
+  alert(`Player ${winner} won!`);
   let win = document.createTextNode("Wictory!");
   wictory_text.appendChild(win);
 };
