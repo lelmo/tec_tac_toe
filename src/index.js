@@ -9,7 +9,7 @@ const tic_tac_toe = [
 ];
 
 let id = 0;
-let player = "X";
+let player = "x";
 
 const showAlert = num => {
   let item = document.getElementById(num);
@@ -22,8 +22,8 @@ const showAlert = num => {
   // console.log(tic_tac_toe[1]);
 
   check_win();
-  if (player === "X") player = "O";
-  else player = "X";
+  if (player === "x") player = "o";
+  else player = "x";
 
   let new_player_text = document.getElementById("text");
   new_player_text.innerHTML = "player " + player + "'s turn";
@@ -37,11 +37,11 @@ const check_win = () => {
     //Check for x axis
     for (let j = 0; j < 3; j++) {
       if (
-        tic_tac_toe[i][j] === "X" &&
-        tic_tac_toe[i][j + 1] === "X" &&
-        tic_tac_toe[i][j + 2] === "X"
+        tic_tac_toe[i][j] === "x" &&
+        tic_tac_toe[i][j + 1] === "x" &&
+        tic_tac_toe[i][j + 2] === "x"
       ) {
-        console.log("X wins");
+        console.log("x wins");
         wictory();
       }
     }
@@ -50,11 +50,11 @@ const check_win = () => {
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       if (
-        tic_tac_toe[i][j] === "O" &&
-        tic_tac_toe[i][j + 1] === "O" &&
-        tic_tac_toe[i][j + 2] === "O"
+        tic_tac_toe[i][j] === "o" &&
+        tic_tac_toe[i][j + 1] === "o" &&
+        tic_tac_toe[i][j + 2] === "o"
       ) {
-        console.log("O wins");
+        console.log("o wins");
         wictory();
       }
     }
@@ -64,11 +64,11 @@ const check_win = () => {
     // check for y axis
     for (let j = 0; j < 3; j++) {
       if (
-        tic_tac_toe[i][j] === "X" &&
-        tic_tac_toe[i + 1][j] === "X" &&
-        tic_tac_toe[i + 2][j] === "X"
+        tic_tac_toe[i][j] === "x" &&
+        tic_tac_toe[i + 1][j] === "x" &&
+        tic_tac_toe[i + 2][j] === "x"
       ) {
-        console.log("X wins");
+        console.log("x wins");
         wictory();
       }
     }
@@ -77,11 +77,11 @@ const check_win = () => {
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       if (
-        tic_tac_toe[i][j] === "O" &&
-        tic_tac_toe[i + 1][j] === "O" &&
-        tic_tac_toe[i + 2][j] === "O"
+        tic_tac_toe[i][j] === "o" &&
+        tic_tac_toe[i + 1][j] === "o" &&
+        tic_tac_toe[i + 2][j] === "o"
       ) {
-        console.log("O wins");
+        console.log("o wins");
         wictory();
       }
     }
@@ -91,11 +91,11 @@ const check_win = () => {
     // check for diagonal to right
     for (let j = 0; j < 3; j++) {
       if (
-        tic_tac_toe[i][j] === "X" &&
-        tic_tac_toe[i + 1][j + 1] === "X" &&
-        tic_tac_toe[i + 2][j + 2] === "X"
+        tic_tac_toe[i][j] === "x" &&
+        tic_tac_toe[i + 1][j + 1] === "x" &&
+        tic_tac_toe[i + 2][j + 2] === "x"
       ) {
-        console.log("X wins");
+        console.log("x wins");
         wictory();
         return;
       }
@@ -105,11 +105,11 @@ const check_win = () => {
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       if (
-        tic_tac_toe[i][j] === "O" &&
-        tic_tac_toe[i + 1][j + 1] === "O" &&
-        tic_tac_toe[i + 2][j + 2] === "O"
+        tic_tac_toe[i][j] === "o" &&
+        tic_tac_toe[i + 1][j + 1] === "o" &&
+        tic_tac_toe[i + 2][j + 2] === "o"
       ) {
-        console.log("O wins");
+        console.log("o wins");
         wictory();
         return;
       }
@@ -120,11 +120,11 @@ const check_win = () => {
     // check for diagonal to left
     for (let j = 4; j > 1; j--) {
       if (
-        tic_tac_toe[i][j] === "X" &&
-        tic_tac_toe[i + 1][j - 1] === "X" &&
-        tic_tac_toe[i + 2][j - 2] === "X"
+        tic_tac_toe[i][j] === "x" &&
+        tic_tac_toe[i + 1][j - 1] === "x" &&
+        tic_tac_toe[i + 2][j - 2] === "x"
       ) {
-        console.log("X wins");
+        console.log("x wins");
         wictory();
         return;
       }
@@ -134,11 +134,11 @@ const check_win = () => {
   for (let i = 0; i < 3; i++) {
     for (let j = 4; j > 1; j--) {
       if (
-        tic_tac_toe[i][j] === "O" &&
-        tic_tac_toe[i + 1][j - 1] === "O" &&
-        tic_tac_toe[i + 2][j - 2] === "O"
+        tic_tac_toe[i][j] === "o" &&
+        tic_tac_toe[i + 1][j - 1] === "o" &&
+        tic_tac_toe[i + 2][j - 2] === "o"
       ) {
-        console.log("O wins");
+        console.log("o wins");
         wictory();
         return;
       }
@@ -146,87 +146,87 @@ const check_win = () => {
   }*/
   for (let i = 0; i < 5; i++) {
     //  console.log(tic_tac_toe[i].toString());
-    if (tic_tac_toe[i].toString() === "X,X,X,X,X") {
-      console.log("X wins");
+    if (tic_tac_toe[i].toString() === "x,x,x,x,x") {
+      console.log("x wins");
       wictory("1");
     }
   }
 
   for (let i = 0; i < 5; i++) {
     //  console.log(tic_tac_toe[i].toString());
-    if (tic_tac_toe[i].toString() === "O,O,O,O,O") {
-      console.log("O wins");
+    if (tic_tac_toe[i].toString() === "o,o,o,o,o") {
+      console.log("o wins");
       wictory("2");
     }
   }
 
   for (let i = 0; i < 5; i++) {
     if (
-      tic_tac_toe[0][i] === "X" &&
-      tic_tac_toe[1][i] === "X" &&
-      tic_tac_toe[2][i] === "X" &&
-      tic_tac_toe[3][i] === "X" &&
-      tic_tac_toe[4][i] === "X"
+      tic_tac_toe[0][i] === "x" &&
+      tic_tac_toe[1][i] === "x" &&
+      tic_tac_toe[2][i] === "x" &&
+      tic_tac_toe[3][i] === "x" &&
+      tic_tac_toe[4][i] === "x"
     ) {
-      console.log("X wins");
+      console.log("x wins");
       wictory("1");
     }
   }
 
   for (let i = 0; i < 5; i++) {
     if (
-      tic_tac_toe[0][i] === "O" &&
-      tic_tac_toe[1][i] === "O" &&
-      tic_tac_toe[2][i] === "O" &&
-      tic_tac_toe[3][i] === "O" &&
-      tic_tac_toe[4][i] === "O"
+      tic_tac_toe[0][i] === "o" &&
+      tic_tac_toe[1][i] === "o" &&
+      tic_tac_toe[2][i] === "o" &&
+      tic_tac_toe[3][i] === "o" &&
+      tic_tac_toe[4][i] === "o"
     ) {
-      console.log("O wins");
+      console.log("o wins");
       wictory("2");
     }
   }
 
   if (
-    tic_tac_toe[0][0] === "X" &&
-    tic_tac_toe[1][1] === "X" &&
-    tic_tac_toe[2][2] === "X" &&
-    tic_tac_toe[3][3] === "X" &&
-    tic_tac_toe[4][4] === "X"
+    tic_tac_toe[0][0] === "x" &&
+    tic_tac_toe[1][1] === "x" &&
+    tic_tac_toe[2][2] === "x" &&
+    tic_tac_toe[3][3] === "x" &&
+    tic_tac_toe[4][4] === "x"
   ) {
-    console.log("X wins");
+    console.log("x wins");
     wictory("1");
   }
 
   if (
-    tic_tac_toe[0][0] === "O" &&
-    tic_tac_toe[1][1] === "O" &&
-    tic_tac_toe[2][2] === "O" &&
-    tic_tac_toe[3][3] === "O" &&
-    tic_tac_toe[4][4] === "O"
+    tic_tac_toe[0][0] === "o" &&
+    tic_tac_toe[1][1] === "o" &&
+    tic_tac_toe[2][2] === "o" &&
+    tic_tac_toe[3][3] === "o" &&
+    tic_tac_toe[4][4] === "o"
   ) {
-    console.log("O wins");
+    console.log("o wins");
     wictory("2");
   }
 
   if (
-    tic_tac_toe[4][0] === "X" &&
-    tic_tac_toe[3][1] === "X" &&
-    tic_tac_toe[2][2] === "X" &&
-    tic_tac_toe[1][3] === "X" &&
-    tic_tac_toe[0][4] === "X"
+    tic_tac_toe[4][0] === "x" &&
+    tic_tac_toe[3][1] === "x" &&
+    tic_tac_toe[2][2] === "x" &&
+    tic_tac_toe[1][3] === "x" &&
+    tic_tac_toe[0][4] === "x"
   ) {
-    console.log("X wins");
+    console.log("x wins");
     wictory("1");
   }
 
   if (
-    tic_tac_toe[4][0] === "O" &&
-    tic_tac_toe[3][1] === "O" &&
-    tic_tac_toe[2][2] === "O" &&
-    tic_tac_toe[1][3] === "O" &&
-    tic_tac_toe[0][4] === "O"
+    tic_tac_toe[4][0] === "o" &&
+    tic_tac_toe[3][1] === "o" &&
+    tic_tac_toe[2][2] === "o" &&
+    tic_tac_toe[1][3] === "o" &&
+    tic_tac_toe[0][4] === "o"
   ) {
-    console.log("O wins");
+    console.log("o wins");
     wictory("2");
   }
 };
@@ -254,12 +254,12 @@ tic_tac_toe.forEach(row => {
   row.forEach(node => {
     let new_node = document.createElement("td");
     new_node.setAttribute("id", id);
-    let X_O = document.createTextNode(node);
+    let x_o = document.createTextNode(node);
     new_node.onclick = function() {
       showAlert(new_node.id);
     };
     id++;
-    new_node.appendChild(X_O);
+    new_node.appendChild(x_o);
     new_row.appendChild(new_node);
   });
   table.appendChild(new_row);
